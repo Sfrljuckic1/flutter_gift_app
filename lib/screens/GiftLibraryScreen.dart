@@ -13,6 +13,7 @@ class GiftLibraryScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color(0xFF951170),
         title: const Text("Gift Categories"),
       ),
 

@@ -12,10 +12,6 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Let's find you a Gift!"),
-      ),
-
       backgroundColor: const Color(0xffeffafa),
       body: SingleChildScrollView (
         child: Padding(

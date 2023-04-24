@@ -32,6 +32,7 @@ class _GiftScreenState extends State<GiftScreen> {
     return Scaffold(
 
       appBar: AppBar(
+        backgroundColor: const Color(0xFF951170),
         title: Row(
           children: [
             Text(
@@ -40,6 +41,11 @@ class _GiftScreenState extends State<GiftScreen> {
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            Image.asset(
+              'assets/images/gift_logo.png',
+              fit: BoxFit.contain,
+              height: 40,
             ),
           ],
         ),
