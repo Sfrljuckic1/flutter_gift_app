@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gift_app/models/gift_model.dart';
-
 import 'GIftsScreen.dart';
 
 class GiftLibraryScreen extends StatelessWidget {
+  const GiftLibraryScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     CollectionReference categories =
@@ -12,8 +13,9 @@ class GiftLibraryScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Pick an Occasion!"),
+        title: const Text("Gift Categories"),
       ),
+
       body: StreamBuilder<QuerySnapshot>(
         stream: categories.snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -42,7 +44,7 @@ class GiftLibraryScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => GiftsScreen(
+                        builder: (context) => GiftScreen(
                           giftCategory: giftCategories[index],
                         ),
                       ),
