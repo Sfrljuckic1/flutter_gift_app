@@ -13,7 +13,14 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _title() {
-    return const Text('Login Authentication');
+    return const Text(
+      'Login Authentication',
+      style: TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        color: Color(0xff4a148c),
+      ),
+    );
   }
 
   Widget _userUid() {
@@ -30,21 +37,39 @@ class HomePage extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
+            color: Color(0xff4a148c),
           ),
         ),
         const SizedBox(height: 40),
-        const Icon(Icons.person),
-        Text(user?.email ?? 'User Email'),
+        const Icon(
+          Icons.person,
+          color: Color(0xff4a148c),
+          size: 50,
+        ),
+        Text(
+          user?.email ?? 'User Email',
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff4a148c),
+          ),
+        ),
         const SizedBox(height: 40),
       ],
     );
   }
 
-
-
   Widget _signOutButton() {
     return ElevatedButton(
       onPressed: signOut,
+      style: ElevatedButton.styleFrom(
+        primary: const Color(0xff4a148c),
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+        textStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       child: const Text('Sign Out'),
     );
   }
@@ -54,6 +79,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: _title(),
+        backgroundColor: const Color(0xff4a148c),
       ),
       body: Container(
         height: double.infinity,
@@ -72,6 +98,14 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const CategoriesScreen()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xff4a148c),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               child: const Text('Continue to Homepage'),
             ),
             const SizedBox(height: 24.0),

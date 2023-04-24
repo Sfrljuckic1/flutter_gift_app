@@ -1,6 +1,6 @@
 import 'package:flutter_gift_app/auth.dart';
-import 'package:flutter_gift_app/pages/home_page.dart';
-import 'package:flutter_gift_app/pages/login_register_page.dart';
+import 'package:flutter_gift_app/login_pages/home_page.dart';
+import 'package:flutter_gift_app/login_pages/login_register_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetTree extends StatefulWidget {

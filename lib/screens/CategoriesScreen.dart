@@ -13,6 +13,26 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffeffafa),
+
+      appBar: AppBar(
+        centerTitle: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            const Text('Home'),
+            const SizedBox(width: 100),
+            Image.asset(
+              'assets/images/gift_logo.png',
+              height: 45, // adjust the height as needed
+            ),
+            const SizedBox(width: 15)
+
+          ],
+        ),
+          backgroundColor: const Color(0xff4a148c), // Set the background color of the AppBar
+      ),
+
+
       body: SingleChildScrollView (
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -32,7 +52,7 @@ class CategoriesScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => GiftLibraryScreen()),
+                        MaterialPageRoute(builder: (context) => const GiftLibraryScreen()),
                       );
                     },
                     child: Padding(
@@ -99,7 +119,7 @@ class CategoriesScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: const [
                           Icon(Icons.people, size: 64, color: Colors.white),
-                          Text('Join the forum', style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white)),
+                          Text('User Forum', style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white)),
                           Text('Discuss gift ideas with other users in our open posting forum!', style: TextStyle(fontSize: 16.0, color: Colors.white)),
                         ],
                       ),
@@ -168,3 +188,8 @@ class CategoriesScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+

@@ -13,8 +13,20 @@ class GiftLibraryScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF951170),
-        title: const Text("Gift Categories"),
+          centerTitle: false,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text('Gift Library'),
+              const SizedBox(width: 80),
+              Image.asset(
+                'assets/images/gift_logo.png',
+                height: 45, // adjust the height as needed
+                ),
+              const SizedBox(width: 15)
+            ],
+          ),
+          backgroundColor: const Color(0xFF951170), // Set the background color of the AppBar
       ),
 
       body: StreamBuilder<QuerySnapshot>(
