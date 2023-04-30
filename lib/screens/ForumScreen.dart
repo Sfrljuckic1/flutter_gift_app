@@ -29,7 +29,21 @@ class _ForumScreenState extends State<ForumScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('User Gift Forum'),
+        centerTitle: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            const Text('User Forum'),
+            const SizedBox(width: 80),
+            Image.asset(
+              'assets/images/gift_logo.png',
+              height: 45, // adjust the height as needed
+            ),
+            const SizedBox(width: 15)
+
+          ],
+        ),
+        backgroundColor: const Color(0xFF951170), // Set the background color of the AppBar
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: postsStream,
@@ -184,11 +198,11 @@ class _PostScreenState extends State<PostScreen> {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            const SizedBox(height: 32.0),
+            const SizedBox(height: 60.0),
             const Text(
               'Replies:',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 16.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -200,15 +214,32 @@ class _PostScreenState extends State<PostScreen> {
               itemBuilder: (BuildContext context, int index) {
                 final String reply = widget.post.replies[index];
 
-                return Card(
-                  margin: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: ListTile(
-                    title: Text(reply),
-                  ),
+                return Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      child: Text(
+                        reply[0].toUpperCase(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8.0),
+                    Expanded(
+                      child: Card(
+                        margin: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(reply),
+                        ),
+                      ),
+                    ),
+                  ],
                 );
               },
             ),
-            const SizedBox(height: 32.0),
+            const SizedBox(height: 60.0),
             Form(
               key: _formKey,
               child: Column(
@@ -258,6 +289,7 @@ class _PostScreenState extends State<PostScreen> {
     );
   }
 }
+
 
 
 class NewPostScreen extends StatefulWidget {
@@ -333,12 +365,12 @@ class _NewPostScreenState extends State<NewPostScreen> {
               TextFormField(
                 controller: _usernameController, // new field
                 decoration: const InputDecoration(
-                  labelText: 'Your Username',
+                  labelText: 'Your Name',
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your username';
+                    return 'Please enter your name';
                   }
                   return null;
                 },

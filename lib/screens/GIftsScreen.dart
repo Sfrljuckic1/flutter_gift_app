@@ -94,9 +94,9 @@ class _GiftScreenState extends State<GiftScreen> {
                         end: Alignment.bottomCenter,
                         colors: [
                           Colors.transparent,
-                          Colors.black.withOpacity(0.6),
+                          Colors.black.withOpacity(0.8),
                         ],
-                        stops: const [0.5, 1.0],
+                        stops: const [0.01, 3.0],
                       ),
                     ),
                     padding: const EdgeInsets.all(16.0),
@@ -114,7 +114,7 @@ class _GiftScreenState extends State<GiftScreen> {
                               Shadow(
                                 blurRadius: 1.0,
                                 color: Colors.black.withOpacity(0.5),
-                                offset: Offset(1.0, 1.0),
+                                offset: const Offset(1.0, 2.0),
                               ),
                             ],
                           ),
@@ -131,7 +131,7 @@ class _GiftScreenState extends State<GiftScreen> {
                               Shadow(
                                 blurRadius: 1.0,
                                 color: Colors.black.withOpacity(0.5),
-                                offset: Offset(1.0, 1.0),
+                                offset: const Offset(1.0, 2.0),
                               ),
                             ],
                           ),

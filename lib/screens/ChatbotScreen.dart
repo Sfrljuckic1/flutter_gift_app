@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (_controller.text.isEmpty) return;
     ChatMessage message = ChatMessage(
       text: _controller.text,
-      sender: "user",
+      sender: "you",
       isImage: false,
     );
 
@@ -118,7 +118,23 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("GiftBot")),
+        appBar: AppBar(
+          centerTitle: false,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text('GiftBot'),
+              const SizedBox(width: 90),
+              Image.asset(
+                'assets/images/gift_logo.png',
+                height: 45, // adjust the height as needed
+              ),
+              const SizedBox(width: 15)
+
+            ],
+          ),
+          backgroundColor: const Color(0xFF951170), // Set the background color of the AppBar
+        ),
         body: SafeArea(
           child: Column(
             children: [
