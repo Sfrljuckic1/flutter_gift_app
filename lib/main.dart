@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'screens/CategoriesScreen.dart';
 import 'firebase_options.dart';
 import 'widget_tree.dart';
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gift App',
+      title: 'Wrap it App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -67,7 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 32),
             const Text(
-              'Wrap-It Up',
+              'Wrap it App',
               style: TextStyle(
                 color: Color(0xFF322591),
                 fontSize: 34,

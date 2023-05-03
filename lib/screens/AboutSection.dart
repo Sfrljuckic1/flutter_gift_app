@@ -18,10 +18,16 @@ class AboutSection extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'This app was created to help you find the perfect gift for your loved ones. '
-                  'Use the Gift Library to browse gift ideas for any occasion, take the Quiz to '
-                  'get personalized gift recommendations, join the Forum to discuss gift ideas '
-                  'with other users, and talk to Giftbot for gift recommendations.',
+              'Wrap it App was created to help you find the perfect gift for your loved ones.'
+                  '\n '
+                  '\n- Use the Gift Library to browse gift ideas for a variety of occasions '
+                  '\n '
+                  '\n- Take the Quiz to get personalized gift recommendations'
+                  '\n '
+                  '\n- Join the Forum to discuss gift ideas with other users, '
+                  '\n '
+                  '\n- Or just ask GiftBot for recommendations you\'ll get a custom response !'
+                  '\n ',
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 24.0),
@@ -42,7 +48,11 @@ class AboutSection extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'Media content and images for this application are not owned.' ,
+              'The media and images used in this app are not owned by us and are sourced '
+                  'from various online image URLs. We do not claim ownership of any of the '
+                  'media or images used in this app. If you are the owner of any of the media '
+                  'or images used in this app and wish to have it removed, please contact us '
+                  'and we will take immediate action.' ,
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 16.0),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.selimfrljuckic.flutter_gift_app">
    <application
-        android:label="flutter_gift_app"
+        android:label="Wrap it App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
